@@ -11,7 +11,7 @@ Wagtail CMS project ready to use on OpenShift
 Your media files and database will be on OpenShift in a persistent directory called `$OPENSHIFT_DATA_DIR` in that way:
 ```
 $OPENSHIFT_DATA_DIR/
-    media/
     db.sqlite3
+    media/
 ```
-Don't worries... they will not be affected by `git push`.
+Don't worry... they will not be affected by `git push`.
