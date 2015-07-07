@@ -15,7 +15,6 @@ import os
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
-print BASE_DIR
 
 # a setting to determine whether we are running on OpenShift
 ON_OPENSHIFT = False
@@ -38,12 +37,11 @@ TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = []
 
 if ON_OPENSHIFT:
-    #from sockets import gethostname
+    from socket import gethostname
 
     ALLOWED_HOSTS = [
-        '*',
-        #gethostname(), # For internal OpenShift load balancer security purposes.
-        #os.environ['OPENSHIFT_APP_DNS'], # Dynamically map to the OpenShift gear name.
+        gethostname(), # For internal OpenShift load balancer security purposes.
+        os.environ['OPENSHIFT_APP_DNS'], # Dynamically map to the OpenShift gear name.
         #'example.com', # First DNS alias (set up in the app)
         #'www.example.com', # Second DNS alias (set up in the app)
         ]

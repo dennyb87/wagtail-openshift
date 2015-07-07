@@ -16,16 +16,16 @@ then
 	cp "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/db.sqlite3 $OPENSHIFT_DATA_DIR
 else
     # GETTING-STARTED: change 'wagtail-openshift' to your project name:
-	echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/wagtail-openshift/manage.py makemigrations'"
+	echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/wagtail-openshift/manage.py makemigrations --noinput'"
     # GETTING-STARTED: change 'wagtail-openshift' to your project name:
-	python "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/manage.py makemigrations
+	python "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/manage.py makemigrations --noinput
     # GETTING-STARTED: change 'wagtail-openshift' to your project name:
-	echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/wagtail-openshift/manage.py migrate'"
+	echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/wagtail-openshift/manage.py migrate --noinput'"
     # GETTING-STARTED: change 'wagtail-openshift' to your project name:
-	python "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/manage.py migrate
+	python "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/manage.py migrate --noinput
 fi
 
 # GETTING-STARTED: change 'wagtail-openshift' to your project name:
-echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/wagtail-openshift/manage.py collectstatic --noinput --link'"
+echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/wagtail-openshift/manage.py collectstatic --noinput'"
 # GETTING-STARTED: change 'wagtail-openshift' to your project name:
-python "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/manage.py collectstatic --noinput --link
+python "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/manage.py collectstatic --noinput
