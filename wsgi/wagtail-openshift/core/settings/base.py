@@ -173,7 +173,7 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 if ON_OPENSHIFT:
-    MEDIA_ROOT = os.environ.get('OPENSHIFT_DATA_DIR', '')
+    MEDIA_ROOT = os.environ.get('OPENSHIFT_DATA_DIR', '') + 'media'
 MEDIA_URL = '/media/'
 
 # Wagtail settings

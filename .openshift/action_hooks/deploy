@@ -31,3 +31,12 @@ echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/wagtail-openshift/manage.py col
 python "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/manage.py collectstatic --noinput --link
 # Create symlink to wsgi/static
 ln -sf "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/static "$OPENSHIFT_REPO_DIR"wsgi/static
+
+# Create media folder
+if [ ! -d $OPENSHIFT_DATA_DIR/media ]; then
+mkdir $OPENSHIFT_DATA_DIR/media
+fi
+ 
+# Create symlink to media folder
+ln -sf $OPENSHIFT_DATA_DIR/media $OPENSHIFT_REPO_DIR/wsgi/static/media
+
