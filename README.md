@@ -8,7 +8,7 @@ Wagtail CMS project ready to use on OpenShift
 * change username and password of the account!
 
 # Media files & Database
-Your media files and database will be on OpenShift in a persistent directory called `$OPENSHIFT_DATA_DIR` in that way:
+Your media files and database will be on OpenShift in a persistent directory called `$OPENSHIFT_DATA_DIR` in this way:
 ```
 $OPENSHIFT_DATA_DIR/
     db.sqlite3
