@@ -31,7 +31,6 @@ if ON_OPENSHIFT:
         print("WARNING: The DEBUG environment is set to True.")
 else:
     DEBUG = True
-DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # Allowed Hosts
@@ -118,10 +117,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASE_PATH = os.path.join(BASE_DIR, 'db.sqlite3')
+DATABASE_NAME = 'db.sqlite3'
+DATABASE_PATH = os.path.join(BASE_DIR, DATABASE_NAME)
 
 if ON_OPENSHIFT:
-    DATABASE_PATH = os.path.join(os.environ['OPENSHIFT_DATA_DIR'], 'sqlite3.db')
+    DATABASE_PATH = os.path.join(os.environ['OPENSHIFT_DATA_DIR'], DATABASE_NAME)
 
 DATABASES = {
     'default': {
