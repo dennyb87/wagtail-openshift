@@ -1,4 +1,4 @@
-# wagtail-openshift
+# Wagtail-OpenShift
 Wagtail CMS project ready to use on OpenShift
 
 # Getting started
