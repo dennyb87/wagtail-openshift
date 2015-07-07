@@ -31,6 +31,7 @@ if ON_OPENSHIFT:
         print("WARNING: The DEBUG environment is set to True.")
 else:
     DEBUG = True
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # Allowed Hosts
@@ -38,11 +39,12 @@ TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = []
 
 if ON_OPENSHIFT:
-    from sockets import gethostname
+    #from sockets import gethostname
 
     ALLOWED_HOSTS = [
-        gethostname(), # For internal OpenShift load balancer security purposes.
-        os.environ['OPENSHIFT_APP_DNS'], # Dynamically map to the OpenShift gear name.
+        '*',
+        #gethostname(), # For internal OpenShift load balancer security purposes.
+        #os.environ['OPENSHIFT_APP_DNS'], # Dynamically map to the OpenShift gear name.
         #'example.com', # First DNS alias (set up in the app)
         #'www.example.com', # Second DNS alias (set up in the app)
         ]
