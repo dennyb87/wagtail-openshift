@@ -26,6 +26,6 @@ else
 fi
 
 # GETTING-STARTED: change 'wagtail-openshift' to your project name:
-echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/wagtail-openshift/manage.py collectstatic --noinput'"
+echo "Executing 'python $OPENSHIFT_REPO_DIR/wsgi/wagtail-openshift/manage.py collectstatic --noinput --link'"
 # GETTING-STARTED: change 'wagtail-openshift' to your project name:
-python "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/manage.py collectstatic --noinput
+python "$OPENSHIFT_REPO_DIR"wsgi/wagtail-openshift/manage.py collectstatic --noinput --link
