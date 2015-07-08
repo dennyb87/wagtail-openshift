@@ -178,4 +178,4 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "core"
+WAGTAIL_SITE_NAME = "Wagtail-OpenShift"
