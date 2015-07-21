@@ -1,5 +1,5 @@
 # Wagtail-OpenShift
-Wagtail CMS project ready to use on OpenShift
+Wagtail project ready to use on OpenShift
 
 ## Getting started
 * login with your openshift credentials  `rhc setup -l username`
