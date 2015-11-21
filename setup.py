@@ -14,5 +14,5 @@ setup(
     # GETTING-STARTED: set author email (your email):
     author_email='dennybaldini@gmail.com',
     # GETTING-STARTED: define required django version:
-    install_requires=['wagtail==1.0rc2'],
+    install_requires=['wagtail==1.2'],
 )
